@@ -1,0 +1,40 @@
+{
+  "project_info": {
+    "project_number": "313289583009",
+    "firebase_url": "https://cltr-alt-elite.firebaseio.com",
+    "project_id": "cltr-alt-elite",
+    "storage_bucket": "cltr-alt-elite.appspot.com"
+  },
+  "client": [
+    {
+      "client_info": {
+        "mobilesdk_app_id": "1:313289583009:android:0f1ab5030e3260bd8a43e0",
+        "android_client_info": {
+          "package_name": "in.darshanudagire.employee"
+        }
+      },
+      "oauth_client": [
+        {
+          "client_id": "313289583009-05er206upilbo6ttdih2g15uu295pjl5.apps.googleusercontent.com",
+          "client_type": 3
+        }
+      ],
+      "api_key": [
+        {
+          "current_key": "AIzaSyCQVMZOzsa0SWQmGnX4-HW_0vT5OFzSU5g"
+        }
+      ],
+      "services": {
+        "appinvite_service": {
+          "other_platform_oauth_client": [
+            {
+              "client_id": "313289583009-05er206upilbo6ttdih2g15uu295pjl5.apps.googleusercontent.com",
+              "client_type": 3
+            }
+          ]
+        }
+      }
+    }
+  ],
+  "configuration_version": "1"
+}
