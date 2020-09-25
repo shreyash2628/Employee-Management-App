@@ -5,7 +5,7 @@
     android:layout_width="match_parent"
     android:layout_height="match_parent"
     tools:context=".sidenavigation.MyProfile">
-
+<!--Profile Pic!-->
     <com.mikhaellopez.circularimageview.CircularImageView
         android:layout_width="148dp"
         android:layout_height="150dp"
@@ -19,7 +19,7 @@
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toTopOf="parent" />
-
+<!--    Location-->
     <EditText
         android:id="@+id/editTextTextPersonName12"
         android:layout_width="307dp"
@@ -32,7 +32,7 @@
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintHorizontal_bias="0.846"
         app:layout_constraintStart_toStartOf="parent" />
-
+<!--Contact-->
     <EditText
         android:id="@+id/editTextTextPersonName11"
         android:layout_width="307dp"
@@ -45,7 +45,7 @@
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintHorizontal_bias="0.846"
         app:layout_constraintStart_toStartOf="parent" />
-
+<!--Email-->
     <EditText
         android:id="@+id/editTextTextPersonName13"
         android:layout_width="307dp"
@@ -58,7 +58,7 @@
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintHorizontal_bias="0.884"
         app:layout_constraintStart_toStartOf="parent" />
-
+<!--Name-->
     <EditText
         android:id="@+id/editText2"
         android:layout_width="307dp"
@@ -71,7 +71,7 @@
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintHorizontal_bias="0.846"
         app:layout_constraintStart_toStartOf="parent" />
-
+<!--Designation-->
     <EditText
         android:id="@+id/editTextTextPersonName10"
         android:layout_width="307dp"
@@ -84,7 +84,7 @@
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintHorizontal_bias="0.846"
         app:layout_constraintStart_toStartOf="parent" />
-
+<!--EmployeeID-->
     <EditText
         android:id="@+id/editTextTextPersonName9"
         android:layout_width="307dp"
@@ -97,7 +97,7 @@
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintHorizontal_bias="0.846"
         app:layout_constraintStart_toStartOf="parent" />
-
+<!--Icons ALLLLDOWN-->
     <ImageView
         android:id="@+id/imageView3"
         android:layout_width="78dp"
@@ -169,5 +169,5 @@
         app:layout_constraintTop_toTopOf="parent"
         app:layout_constraintVertical_bias="0.522"
         app:srcCompat="@mipmap/icondesignation2_foreground" />
-
+<!--ICONS END-->
 </androidx.constraintlayout.widget.ConstraintLayout>
