@@ -6,10 +6,12 @@
     android:layout_height="match_parent"
     android:orientation="vertical"
     tools:context=".dashboard.Team">
+    <!-- Adding Linear vetical orientation  !-->
     <LinearLayout
         android:layout_width="match_parent"
         android:layout_height="match_parent"
         android:orientation="vertical">
+        <!-- Cardview !-->
         <androidx.cardview.widget.CardView
             android:layout_width="372dp"
             android:layout_margin="10dp"
@@ -96,6 +98,7 @@
                     app:layout_constraintVertical_bias="0.976" />
             </androidx.constraintlayout.widget.ConstraintLayout>
         </androidx.cardview.widget.CardView>
+        <!-- Cardview 2 !-->
         <androidx.cardview.widget.CardView
             android:layout_width="372dp"
             android:layout_margin="10dp"
@@ -137,9 +140,9 @@
                     android:id="@+id/textViewDesignation3"
                     android:layout_width="200dp"
                     android:layout_height="38dp"
-                    android:layout_marginEnd="92dp"
-                    android:layout_marginRight="92dp"
-                    android:layout_marginBottom="33dp"
+                    android:layout_marginStart="16dp"
+                    android:layout_marginLeft="16dp"
+                    android:layout_marginBottom="24dp"
                     android:background="#FFFFFF"
                     android:fontFamily="@font/opensanssemibold"
                     android:hint="Designation"
@@ -147,7 +150,7 @@
                     android:textColor="#000000"
                     android:textSize="18sp"
                     app:layout_constraintBottom_toTopOf="@+id/Description3"
-                    app:layout_constraintEnd_toStartOf="@+id/profile_image3" />
+                    app:layout_constraintStart_toStartOf="parent" />
 
                 <de.hdodenhof.circleimageview.CircleImageView
                     android:id="@+id/profile_image3"
@@ -183,6 +186,7 @@
                     app:layout_constraintVertical_bias="0.976" />
             </androidx.constraintlayout.widget.ConstraintLayout>
         </androidx.cardview.widget.CardView>
+        <!-- Cardview 3 !-->
         <androidx.cardview.widget.CardView
             android:layout_width="372dp"
             android:layout_margin="10dp"
@@ -270,6 +274,7 @@
                     app:layout_constraintVertical_bias="0.976" />
             </androidx.constraintlayout.widget.ConstraintLayout>
         </androidx.cardview.widget.CardView>
+        <!-- Cardview 4 !-->
         <androidx.cardview.widget.CardView
             android:layout_width="372dp"
             android:layout_margin="10dp"
@@ -357,6 +362,7 @@
                     app:layout_constraintVertical_bias="0.976" />
             </androidx.constraintlayout.widget.ConstraintLayout>
         </androidx.cardview.widget.CardView>
+        <!-- Cardview 5!-->
         <androidx.cardview.widget.CardView
             android:layout_width="372dp"
             android:layout_margin="10dp"
@@ -420,7 +426,7 @@
                     app:civ_border_width="2dp"
                     app:layout_constraintBottom_toTopOf="@+id/Description6"
                     app:layout_constraintEnd_toEndOf="parent"
-                    app:layout_constraintHorizontal_bias="0.654"
+                    app:layout_constraintHorizontal_bias="0.962"
                     app:layout_constraintStart_toEndOf="@+id/textViewName6"
                     app:layout_constraintTop_toTopOf="parent"
                     app:layout_constraintVertical_bias="1.0" />
