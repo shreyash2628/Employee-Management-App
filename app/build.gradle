@@ -7,8 +7,9 @@ android {
 
     defaultConfig {
         applicationId "in.darshanudagire.employee"
-        minSdkVersion 16
+        minSdkVersion 23
         targetSdkVersion 30
+        multiDexEnabled true
         versionCode 1
         versionName "1.0"
 
@@ -30,10 +31,16 @@ dependencies {
     implementation 'com.google.firebase:firebase-auth:19.3.2'
     implementation 'com.google.firebase:firebase-firestore:21.5.0'
     implementation 'com.google.firebase:firebase-storage:19.1.1'
+    implementation 'com.android.support:multidex:1.0.3'
+    implementation 'androidx.cardview:cardview:1.0.0'
+    implementation "com.mikepenz:materialdrawer:6.1.2"
+    implementation 'androidx.annotation:annotation:1.1.0'
+    implementation "com.mikepenz:materialize:1.2.1"
+    implementation 'com.firebaseui:firebase-ui-firestore:6.3.0'
+    implementation 'de.hdodenhof:circleimageview:3.1.0'
+    implementation 'com.mikepenz:google-material-typeface:3.0.1.2.original@aar'
     testImplementation 'junit:junit:4.12'
     androidTestImplementation 'androidx.test.ext:junit:1.1.2'
-    implementation 'com.jakewharton:butterknife:10.2.3'
-    annotationProcessor 'com.jakewharton:butterknife-compiler:10.2.3'
     implementation 'com.squareup.picasso:picasso:2.71828'
     androidTestImplementation 'androidx.test.espresso:espresso-core:3.3.0'
 

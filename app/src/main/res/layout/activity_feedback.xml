@@ -1,9 +1,175 @@
 <?xml version="1.0" encoding="utf-8"?>
-<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
     xmlns:app="http://schemas.android.com/apk/res-auto"
     xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
+    android:background="#E7E7E7"
     tools:context=".dashboard.Feedback">
+    <androidx.appcompat.widget.Toolbar
+        android:id="@+id/toolbar"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_alignParentTop="true"
+        android:background="@color/black"
+        app:title="Feedback"
+        android:theme="@style/MyToolbarStyle"
+        app:titleTextColor="@color/white">
+    </androidx.appcompat.widget.Toolbar>
 
-</androidx.constraintlayout.widget.ConstraintLayout>
+    <RelativeLayout
+        android:layout_below="@id/toolbar"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent">
+
+<!--        feedback-->
+        <androidx.cardview.widget.CardView
+            android:id="@+id/cardview"
+            android:layout_width="match_parent"
+            android:layout_height="150dp">
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:orientation="vertical"
+                android:background="#4FC2F7">
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:text="Send us your Feedback !"
+                    android:textSize="20dp"
+                    android:textColor="@color/black"
+                    android:layout_marginLeft="16dp"
+                    android:layout_marginTop="20dp"
+                    android:fontFamily="@font/sbold">
+                </TextView>
+                <TextView
+                    android:layout_marginLeft="16dp"
+                    android:layout_marginRight="16dp"
+                    android:fontFamily="@font/sregular"
+                    android:textColor="@color/black"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:text="Do you have some suggestion or found some new bug ?\nLet us know">
+                </TextView>
+            </LinearLayout>
+        </androidx.cardview.widget.CardView>
+
+<!--        Experience-->
+        <LinearLayout
+            android:layout_below="@+id/cardview"
+            android:id="@+id/linear1"
+            android:paddingTop="10dp"
+            android:paddingBottom="10dp"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:orientation="vertical"
+            android:background="#E7E7E7">
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginLeft="16dp"
+                android:text="How was Your Experience ?"
+                android:textSize="18dp"
+                android:textColor="@color/black">
+            </TextView>
+            <RadioGroup
+                android:id="@+id/radioexpgrp_id"
+                android:layout_marginLeft="16dp"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content">
+                <RadioButton
+                    android:id="@+id/good_id"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:text="Good">
+                </RadioButton>
+                <RadioButton
+                    android:id="@+id/satify_id"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:text="Satisfying">
+                </RadioButton>
+                <RadioButton
+                    android:id="@+id/bad_id"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:text="Bad">
+                </RadioButton>
+            </RadioGroup>
+
+
+        </LinearLayout>
+
+<!--        Description-->
+        <EditText
+            android:id="@id/edittxtdes"
+            android:layout_below="@id/linear1"
+            android:inputType="textMultiLine"
+            android:background="@color/white"
+            android:lines="8"
+            android:padding="10dp"
+            android:hint="Description"
+            android:minLines="10"
+            android:gravity="top|left"
+            android:maxLines="10"
+            android:layout_height="wrap_content"
+            android:layout_width="match_parent"
+            android:scrollbars="vertical"
+            ></EditText>
+
+<!--        Description Type Radio Grp-->
+        <LinearLayout
+            android:background="#E7E7E7"
+            android:id="@+id/linear2"
+            android:layout_below="@+id/edittxtdes"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:orientation="horizontal"
+            android:layout_centerHorizontal="true">
+
+            <RadioGroup
+                android:layout_marginTop="10dp"
+                android:orientation="horizontal"
+                android:id="@+id/radiodesgrp_id"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content">
+                <RadioButton
+                    android:id="@+id/bug_id"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:text="Bug">
+                </RadioButton>
+                <RadioButton
+                    android:id="@+id/suggestion_id"
+                    android:layout_marginLeft="30dp"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:text="Suggestions">
+                </RadioButton>
+                <RadioButton
+                    android:id="@+id/others_id"
+                    android:layout_marginLeft="30dp"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:text="Others">
+                </RadioButton>
+            </RadioGroup>
+        </LinearLayout>
+
+<!--        Submit-->
+        <Button
+            android:id="@+id/submitBtn_id"
+            android:layout_marginTop="40dp"
+            android:layout_below="@id/linear2"
+            android:layout_width="match_parent"
+            android:layout_marginRight="20dp"
+            android:layout_marginLeft="20dp"
+            android:background="#4FC2F7"
+            android:text="Submit"
+            android:fontFamily="@font/sbold"
+            android:textSize="18dp"
+            android:layout_height="wrap_content">
+        </Button>
+    </RelativeLayout>
+
+</RelativeLayout>

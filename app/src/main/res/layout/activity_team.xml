@@ -1,9 +1,473 @@
 <?xml version="1.0" encoding="utf-8"?>
-<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+<ScrollView xmlns:android="http://schemas.android.com/apk/res/android"
     xmlns:app="http://schemas.android.com/apk/res-auto"
     xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
+    android:orientation="vertical"
     tools:context=".dashboard.Team">
+    <!-- Adding Linear vetical orientation  !-->
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:orientation="vertical">
 
-</androidx.constraintlayout.widget.ConstraintLayout>
+        <androidx.appcompat.widget.Toolbar
+            android:id="@+id/toolbar"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:background="@color/black"
+            app:title="My Team"
+            android:layout_alignParentTop="true"
+            android:theme="@style/MyToolbarStyle"
+            app:titleTextColor="@color/white">
+        </androidx.appcompat.widget.Toolbar>
+        <!-- Cardview !-->
+        <androidx.cardview.widget.CardView
+            android:layout_width="372dp"
+            android:layout_margin="10dp"
+            android:layout_height="255dp"
+            android:layout_marginStart="20dp"
+            android:layout_marginEnd="20dp"
+            android:layout_gravity="center_horizontal"
+            app:cardBackgroundColor="#FFFFFF"
+            app:cardCornerRadius="8dp"
+            app:layout_constraintBottom_toBottomOf="parent"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintHorizontal_bias="0.666"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toTopOf="parent"
+            app:layout_constraintVertical_bias="0.036">
+            <!--cardview within !-->
+            <androidx.constraintlayout.widget.ConstraintLayout
+                android:layout_width="match_parent"
+                android:layout_height="253dp">
+
+                <TextView
+                    android:id="@+id/textViewName2"
+                    android:layout_width="211dp"
+                    android:layout_height="46dp"
+                    android:background="#FFFFFF"
+                    android:fontFamily="@font/opensansbold"
+                    android:hint="Name"
+                    android:text="Darshan"
+                    android:textColor="#4A89F3"
+                    android:textSize="30sp"
+                    app:layout_constraintBottom_toTopOf="@+id/textViewDesignation2"
+                    app:layout_constraintEnd_toEndOf="parent"
+                    app:layout_constraintHorizontal_bias="0.099"
+                    app:layout_constraintStart_toStartOf="parent"
+                    app:layout_constraintTop_toTopOf="parent"
+                    app:layout_constraintVertical_bias="1.0" />
+
+                <TextView
+                    android:id="@+id/textViewDesignation2"
+                    android:layout_width="200dp"
+                    android:layout_height="38dp"
+                    android:layout_marginStart="16dp"
+                    android:layout_marginLeft="16dp"
+                    android:layout_marginBottom="24dp"
+                    android:background="#FFFFFF"
+                    android:fontFamily="@font/opensanssemibold"
+                    android:hint="Designation"
+                    android:text="Head Developer"
+                    android:textColor="#000000"
+                    android:textSize="18sp"
+                    app:layout_constraintBottom_toTopOf="@+id/Description2"
+                    app:layout_constraintStart_toStartOf="parent" />
+
+                <de.hdodenhof.circleimageview.CircleImageView
+                    android:id="@+id/profile_image2"
+                    android:layout_width="64dp"
+                    android:layout_height="82dp"
+                    android:layout_marginBottom="25dp"
+                    android:src="@drawable/darshan"
+                    app:civ_border_color="#FF000000"
+                    app:civ_border_width="2dp"
+                    app:layout_constraintBottom_toTopOf="@+id/Description2"
+                    app:layout_constraintEnd_toEndOf="parent"
+                    app:layout_constraintHorizontal_bias="0.654"
+                    app:layout_constraintStart_toEndOf="@+id/textViewName2"
+                    app:layout_constraintTop_toTopOf="parent"
+                    app:layout_constraintVertical_bias="1.0" />
+
+                <TextView
+                    android:id="@+id/Description2"
+                    android:layout_width="339dp"
+                    android:layout_height="124dp"
+                    android:layout_marginBottom="10dp"
+                    android:background="#FBFBFB"
+                    android:fontFamily="@font/opensansregular"
+                    android:hint="Description"
+                    android:text="As a lead applications developer, you would be responsible for directing the development team in the design, development, coding, testing and debugging of applications. You would also coordinate the development staff's schedule and ensure effective communication between team members and other IT functional areas."
+                    android:textColor="#000000"
+                    android:textSize="18sp"
+                    app:layout_constraintBottom_toBottomOf="parent"
+                    app:layout_constraintEnd_toEndOf="parent"
+                    app:layout_constraintHorizontal_bias="0.484"
+                    app:layout_constraintStart_toStartOf="parent"
+                    app:layout_constraintTop_toTopOf="parent"
+                    app:layout_constraintVertical_bias="0.976" />
+            </androidx.constraintlayout.widget.ConstraintLayout>
+        </androidx.cardview.widget.CardView>
+        <!-- Cardview 2 !-->
+        <androidx.cardview.widget.CardView
+            android:layout_width="372dp"
+            android:layout_margin="10dp"
+            android:layout_height="255dp"
+            android:layout_gravity="center_horizontal"
+            android:layout_marginStart="20dp"
+            android:layout_marginEnd="20dp"
+            app:cardBackgroundColor="#FFFFFF"
+            app:cardCornerRadius="8dp"
+            app:layout_constraintBottom_toBottomOf="parent"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintHorizontal_bias="0.666"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toTopOf="parent"
+            app:layout_constraintVertical_bias="0.036">
+
+            <androidx.constraintlayout.widget.ConstraintLayout
+                android:id="@+id/cardview3"
+                android:layout_width="match_parent"
+                android:layout_height="253dp">
+
+                <TextView
+                    android:id="@+id/textViewName3"
+                    android:layout_width="211dp"
+                    android:layout_height="46dp"
+                    android:background="#00FFFFFF"
+                    android:fontFamily="@font/opensansbold"
+                    android:hint="Name"
+                    android:text="Shreyash"
+                    android:textColor="#4A89F3"
+                    android:textSize="30sp"
+                    app:layout_constraintBottom_toTopOf="@+id/textViewDesignation3"
+                    app:layout_constraintEnd_toEndOf="parent"
+                    app:layout_constraintHorizontal_bias="0.099"
+                    app:layout_constraintStart_toStartOf="parent"
+                    app:layout_constraintTop_toTopOf="parent"
+                    app:layout_constraintVertical_bias="1.0" />
+
+                <TextView
+                    android:id="@+id/textViewDesignation3"
+                    android:layout_width="200dp"
+                    android:layout_height="38dp"
+                    android:layout_marginStart="16dp"
+                    android:layout_marginLeft="16dp"
+                    android:layout_marginBottom="24dp"
+                    android:background="#FFFFFF"
+                    android:fontFamily="@font/opensanssemibold"
+                    android:hint="Designation"
+                    android:text="Project Leader"
+                    android:textColor="#000000"
+                    android:textSize="18sp"
+                    app:layout_constraintBottom_toTopOf="@+id/Description3"
+                    app:layout_constraintStart_toStartOf="parent" />
+
+                <de.hdodenhof.circleimageview.CircleImageView
+                    android:id="@+id/profile_image3"
+                    android:layout_width="64dp"
+                    android:layout_height="82dp"
+                    android:layout_marginBottom="25dp"
+                    android:src="@drawable/shreyash"
+                    app:civ_border_color="#FF000000"
+                    app:civ_border_width="2dp"
+                    app:layout_constraintBottom_toTopOf="@+id/Description3"
+                    app:layout_constraintEnd_toEndOf="parent"
+                    app:layout_constraintHorizontal_bias="0.654"
+                    app:layout_constraintStart_toEndOf="@+id/textViewName3"
+                    app:layout_constraintTop_toTopOf="parent"
+                    app:layout_constraintVertical_bias="1.0" />
+
+                <TextView
+                    android:id="@+id/Description3"
+                    android:layout_width="339dp"
+                    android:layout_height="124dp"
+                    android:layout_marginBottom="10dp"
+                    android:background="#FBFBFB"
+                    android:fontFamily="@font/opensansregular"
+                    android:hint="Description"
+                    android:text="The project leader engages the team, motivating them, taking care of their needs and maintaining a friendly and productive work environment. Some of their primary responsibilities include: Attending meetings with other leaders. Developing progress reports regarding projects they're working on."
+                    android:textColor="#000000"
+                    android:textSize="18sp"
+                    app:layout_constraintBottom_toBottomOf="parent"
+                    app:layout_constraintEnd_toEndOf="parent"
+                    app:layout_constraintHorizontal_bias="0.484"
+                    app:layout_constraintStart_toStartOf="parent"
+                    app:layout_constraintTop_toTopOf="parent"
+                    app:layout_constraintVertical_bias="0.976" />
+            </androidx.constraintlayout.widget.ConstraintLayout>
+        </androidx.cardview.widget.CardView>
+        <!-- Cardview 3 !-->
+        <androidx.cardview.widget.CardView
+            android:layout_width="372dp"
+            android:layout_margin="10dp"
+            android:layout_height="255dp"
+            android:layout_marginStart="20dp"
+            android:layout_marginEnd="20dp"
+            app:cardBackgroundColor="#FFFFFF"
+            android:layout_gravity="center_horizontal"
+            app:cardCornerRadius="8dp"
+            app:layout_constraintBottom_toBottomOf="parent"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintHorizontal_bias="0.666"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toTopOf="parent"
+            app:layout_constraintVertical_bias="0.036">
+
+            <androidx.constraintlayout.widget.ConstraintLayout
+                android:id="@+id/cardview4"
+                android:layout_width="match_parent"
+                android:layout_height="253dp">
+
+                <TextView
+                    android:id="@+id/textViewName4"
+                    android:layout_width="211dp"
+                    android:layout_height="46dp"
+                    android:background="#FFFFFF"
+                    android:fontFamily="@font/opensansbold"
+                    android:hint="Name"
+                    android:text="Nidhi"
+                    android:textColor="#4A89F3"
+                    android:textSize="30sp"
+                    app:layout_constraintBottom_toTopOf="@+id/textViewDesignation4"
+                    app:layout_constraintEnd_toEndOf="parent"
+                    app:layout_constraintHorizontal_bias="0.099"
+                    app:layout_constraintStart_toStartOf="parent"
+                    app:layout_constraintTop_toTopOf="parent"
+                    app:layout_constraintVertical_bias="1.0" />
+
+                <TextView
+                    android:id="@+id/textViewDesignation4"
+                    android:layout_width="200dp"
+                    android:layout_height="38dp"
+                    android:layout_marginStart="16dp"
+                    android:layout_marginLeft="16dp"
+                    android:layout_marginBottom="24dp"
+                    android:background="#FFFFFF"
+                    android:fontFamily="@font/opensanssemibold"
+                    android:hint="Designation"
+                    android:text="UI/UX Designer"
+                    android:textColor="#000000"
+                    android:textSize="18sp"
+                    app:layout_constraintBottom_toTopOf="@+id/Description4"
+                    app:layout_constraintStart_toStartOf="parent" />
+
+                <de.hdodenhof.circleimageview.CircleImageView
+                    android:id="@+id/profile_image4"
+                    android:layout_width="64dp"
+                    android:layout_height="82dp"
+                    android:layout_marginBottom="25dp"
+                    android:src="@drawable/nidhi"
+                    app:civ_border_color="#FF000000"
+                    app:civ_border_width="2dp"
+                    app:layout_constraintBottom_toTopOf="@+id/Description4"
+                    app:layout_constraintEnd_toEndOf="parent"
+                    app:layout_constraintHorizontal_bias="0.654"
+                    app:layout_constraintStart_toEndOf="@+id/textViewName4"
+                    app:layout_constraintTop_toTopOf="parent"
+                    app:layout_constraintVertical_bias="1.0" />
+
+                <TextView
+                    android:id="@+id/Description4"
+                    android:layout_width="339dp"
+                    android:layout_height="124dp"
+                    android:layout_marginBottom="10dp"
+                    android:background="#FBFBFB"
+                    android:fontFamily="@font/opensansregular"
+                    android:hint="Description"
+                    android:text="UI/UX designer participates is generating original graphic designs, user interface elements, creating UI mockups and prototypes, and determining and troubleshooting the UX problems."
+                    android:textColor="#000000"
+                    android:textSize="18sp"
+                    app:layout_constraintBottom_toBottomOf="parent"
+                    app:layout_constraintEnd_toEndOf="parent"
+                    app:layout_constraintHorizontal_bias="0.484"
+                    app:layout_constraintStart_toStartOf="parent"
+                    app:layout_constraintTop_toTopOf="parent"
+                    app:layout_constraintVertical_bias="0.976" />
+            </androidx.constraintlayout.widget.ConstraintLayout>
+        </androidx.cardview.widget.CardView>
+        <!-- Cardview 4 !-->
+        <androidx.cardview.widget.CardView
+            android:layout_width="372dp"
+            android:layout_margin="10dp"
+            android:layout_gravity="center_horizontal"
+            android:layout_height="255dp"
+            android:layout_marginStart="20dp"
+            android:layout_marginEnd="20dp"
+            app:cardBackgroundColor="#FFFFFF"
+            app:cardCornerRadius="8dp"
+            app:layout_constraintBottom_toBottomOf="parent"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintHorizontal_bias="0.666"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toTopOf="parent"
+            app:layout_constraintVertical_bias="0.036">
+
+            <androidx.constraintlayout.widget.ConstraintLayout
+                android:id="@+id/cardview5"
+                android:layout_width="match_parent"
+                android:layout_height="253dp">
+
+                <TextView
+                    android:id="@+id/textViewName5"
+                    android:layout_width="211dp"
+                    android:layout_height="46dp"
+                    android:background="#FFFFFF"
+                    android:fontFamily="@font/opensansbold"
+                    android:hint="Name"
+                    android:text="Jayesh"
+                    android:textColor="#4A89F3"
+                    android:textSize="30sp"
+                    app:layout_constraintBottom_toTopOf="@+id/textViewDesignation5"
+                    app:layout_constraintEnd_toEndOf="parent"
+                    app:layout_constraintHorizontal_bias="0.099"
+                    app:layout_constraintStart_toStartOf="parent"
+                    app:layout_constraintTop_toTopOf="parent"
+                    app:layout_constraintVertical_bias="1.0" />
+
+                <TextView
+                    android:id="@+id/textViewDesignation5"
+                    android:layout_width="200dp"
+                    android:layout_height="38dp"
+                    android:layout_marginStart="16dp"
+                    android:layout_marginLeft="16dp"
+                    android:layout_marginBottom="24dp"
+                    android:background="#FFFFFF"
+                    android:fontFamily="@font/opensanssemibold"
+                    android:hint="Designation"
+                    android:text="Jr. Developer"
+                    android:textColor="#000000"
+                    android:textSize="18sp"
+                    app:layout_constraintBottom_toTopOf="@+id/Description5"
+                    app:layout_constraintStart_toStartOf="parent" />
+
+                <de.hdodenhof.circleimageview.CircleImageView
+                    android:id="@+id/profile_image5"
+                    android:layout_width="64dp"
+                    android:layout_height="82dp"
+                    android:layout_marginBottom="25dp"
+                    android:src="@drawable/jayz"
+                    app:civ_border_color="#FF000000"
+                    app:civ_border_width="2dp"
+                    app:layout_constraintBottom_toTopOf="@+id/Description5"
+                    app:layout_constraintEnd_toEndOf="parent"
+                    app:layout_constraintHorizontal_bias="1.0"
+                    app:layout_constraintStart_toEndOf="@+id/textViewName5"
+                    app:layout_constraintTop_toTopOf="parent"
+                    app:layout_constraintVertical_bias="0.32" />
+
+                <TextView
+                    android:id="@+id/Description5"
+                    android:layout_width="339dp"
+                    android:layout_height="124dp"
+                    android:layout_marginBottom="10dp"
+                    android:background="#FBFBFB"
+                    android:fontFamily="@font/opensansregular"
+                    android:hint="Description"
+                    android:text="Junior Software Developers are entry-level software developers that assist the development team with all aspects of software design and coding. Their primary role is to learn the codebase, attend design meetings, write basic code, fix bugs, and assist the Development Manager in all design-related tasks."
+                    android:textColor="#000000"
+                    android:textSize="18sp"
+                    app:layout_constraintBottom_toBottomOf="parent"
+                    app:layout_constraintEnd_toEndOf="parent"
+                    app:layout_constraintHorizontal_bias="0.484"
+                    app:layout_constraintStart_toStartOf="parent"
+                    app:layout_constraintTop_toTopOf="parent"
+                    app:layout_constraintVertical_bias="0.976" />
+            </androidx.constraintlayout.widget.ConstraintLayout>
+        </androidx.cardview.widget.CardView>
+        <!-- Cardview 5!-->
+        <androidx.cardview.widget.CardView
+            android:layout_width="372dp"
+            android:layout_margin="10dp"
+            android:layout_gravity="center_horizontal"
+            android:layout_height="255dp"
+            android:layout_marginStart="20dp"
+            android:layout_marginEnd="20dp"
+            app:cardBackgroundColor="#FFFFFF"
+            app:cardCornerRadius="8dp"
+            app:layout_constraintBottom_toBottomOf="parent"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintHorizontal_bias="0.666"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toTopOf="parent"
+            app:layout_constraintVertical_bias="0.036">
+
+            <androidx.constraintlayout.widget.ConstraintLayout
+                android:id="@+id/cardview6"
+                android:layout_width="match_parent"
+                android:layout_height="253dp">
+
+                <TextView
+                    android:id="@+id/textViewName6"
+                    android:layout_width="211dp"
+                    android:layout_height="46dp"
+                    android:background="#00FFFFFF"
+                    android:fontFamily="@font/opensansbold"
+                    android:hint="Name"
+                    android:text="Jenny"
+                    android:textColor="#4A89F3"
+                    android:textSize="30sp"
+                    app:layout_constraintBottom_toTopOf="@+id/textViewDesignation6"
+                    app:layout_constraintEnd_toEndOf="parent"
+                    app:layout_constraintHorizontal_bias="0.099"
+                    app:layout_constraintStart_toStartOf="parent"
+                    app:layout_constraintTop_toTopOf="parent"
+                    app:layout_constraintVertical_bias="1.0" />
+
+                <TextView
+                    android:id="@+id/textViewDesignation6"
+                    android:layout_width="200dp"
+                    android:layout_height="38dp"
+                    android:layout_marginStart="16dp"
+                    android:layout_marginLeft="16dp"
+                    android:layout_marginBottom="24dp"
+                    android:background="#FFFFFF"
+                    android:fontFamily="@font/opensanssemibold"
+                    android:hint="Designation"
+                    android:text="Sr. Developer"
+                    android:textColor="#000000"
+                    android:textSize="18sp"
+                    app:layout_constraintBottom_toTopOf="@+id/Description6"
+                    app:layout_constraintStart_toStartOf="parent" />
+
+                <de.hdodenhof.circleimageview.CircleImageView
+                    android:id="@+id/profile_image6"
+                    android:layout_width="64dp"
+                    android:layout_height="82dp"
+                    android:layout_marginBottom="25dp"
+                    android:src="@drawable/img"
+                    app:civ_border_color="#FF000000"
+                    app:civ_border_width="2dp"
+                    app:layout_constraintBottom_toTopOf="@+id/Description6"
+                    app:layout_constraintEnd_toEndOf="parent"
+                    app:layout_constraintHorizontal_bias="0.962"
+                    app:layout_constraintStart_toEndOf="@+id/textViewName6"
+                    app:layout_constraintTop_toTopOf="parent"
+                    app:layout_constraintVertical_bias="1.0" />
+
+                <TextView
+                    android:id="@+id/Description6"
+                    android:layout_width="339dp"
+                    android:layout_height="124dp"
+                    android:layout_marginBottom="10dp"
+                    android:background="#FBFBFB"
+                    android:fontFamily="@font/opensansregular"
+                    android:hint="Description"
+                    android:text="The responsibilities of Senior Developers include writing code, analyzing data, and contributing to the design and implementation of software. ... Ultimately, a top-notch Senior Developer should have extensive experience in software development, be able to keep up-to-date with deadlines, and have strong analytical skills."
+                    android:textColor="#000000"
+                    android:textSize="18sp"
+                    app:layout_constraintBottom_toBottomOf="parent"
+                    app:layout_constraintEnd_toEndOf="parent"
+                    app:layout_constraintHorizontal_bias="0.484"
+                    app:layout_constraintStart_toStartOf="parent"
+                    app:layout_constraintTop_toTopOf="parent"
+                    app:layout_constraintVertical_bias="0.976" />
+            </androidx.constraintlayout.widget.ConstraintLayout>
+        </androidx.cardview.widget.CardView>
+
+    </LinearLayout>
+
+
+</ScrollView>

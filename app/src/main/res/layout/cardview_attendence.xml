@@ -1,0 +1,53 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    xmlns:app="http://schemas.android.com/apk/res-auto">
+
+    <androidx.cardview.widget.CardView
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginLeft="20dp"
+        android:layout_marginRight="20dp"
+        android:layout_marginTop="10dp"
+        android:background="@drawable/black_rectangle"
+        >
+        <RelativeLayout
+            android:layout_width="match_parent"
+            android:background="@drawable/black_rectangle"
+            android:layout_height="match_parent">
+            <TextView
+                android:id="@+id/date_id"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="September XX, 2020"
+                android:textSize="20dp"
+                android:fontFamily="@font/sbold"
+                android:textColor="@color/black"
+                android:layout_marginLeft="30dp"
+                android:layout_marginTop="20dp">
+            </TextView>
+            <TextView
+                android:id="@+id/starttime_id"
+                android:layout_below="@id/date_id"
+                android:layout_marginLeft="30dp"
+                android:layout_marginTop="10dp"
+                android:textColor="@color/black"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="Start Time : - XX:XX AM">
+            </TextView>
+            <TextView
+                android:id="@+id/endtime_id"
+                android:layout_below="@id/starttime_id"
+                android:layout_marginLeft="30dp"
+                android:layout_marginTop="10dp"
+                android:textColor="@color/black"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="End Time : -   XX:XX AM"
+                android:layout_marginBottom="20dp">
+            </TextView>
+        </RelativeLayout>
+    </androidx.cardview.widget.CardView>
+</RelativeLayout>

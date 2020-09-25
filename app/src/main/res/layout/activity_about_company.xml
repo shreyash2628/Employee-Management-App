@@ -6,4 +6,56 @@
     android:layout_height="match_parent"
     tools:context=".sidenavigation.AboutCompany">
 
+    <androidx.appcompat.widget.Toolbar
+        android:id="@+id/toolbar_aboutus"
+        app:titleTextColor="@color/white"
+        android:theme="@style/MyToolbarStyle"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:background="@color/black"
+        android:minHeight="?attr/actionBarSize"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.0"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent"
+        app:title="About Us" />
+
+    <ImageView
+        android:id="@+id/imageView3"
+        android:layout_width="367dp"
+        android:layout_height="267dp"
+        android:src="@drawable/company_logo"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/toolbar_aboutus" />
+
+    <TextView
+        android:id="@+id/textView13"
+        android:layout_width="350dp"
+        android:layout_height="42dp"
+        android:layout_marginTop="28dp"
+        android:fontFamily="@font/sbold"
+        android:text="Company Description"
+        android:textAppearance="@style/TextAppearance.AppCompat.Body2"
+        android:textSize="24sp"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.459"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/imageView3" />
+
+    <TextView
+        android:id="@+id/editTextTextMultiLine3"
+        android:layout_width="355dp"
+        android:layout_height="267dp"
+        android:ems="10"
+        android:gravity="start|top"
+        android:inputType="textMultiLine"
+        android:text="A dummy corporation, dummy company, or false company is an entity created to serve as a front or cover for one or more companies. It can have the appearance of being real (logo, website, and sometimes employing actual staff), but lacks the capacity to function independently. "
+        android:textColor="@color/black"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/textView13"
+        app:layout_constraintVertical_bias="0.267" />
+
 </androidx.constraintlayout.widget.ConstraintLayout>
