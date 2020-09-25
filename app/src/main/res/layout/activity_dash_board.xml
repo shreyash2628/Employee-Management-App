@@ -1,4 +1,7 @@
 <?xml version="1.0" encoding="utf-8"?>
+
+
+<!--Root View!-->
 <ScrollView
     xmlns:android="http://schemas.android.com/apk/res/android"
     xmlns:app="http://schemas.android.com/apk/res-auto"
@@ -6,15 +9,20 @@
     android:layout_width="match_parent"
     android:layout_height="match_parent"
     android:id="@+id/root_view_dashboard"
-    android:background="@drawable/xd"
+    android:background="@color/white"
     
     >
+
 
         <LinearLayout
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
-            android:orientation="vertical">
+            android:orientation="vertical"
 
+            >
+
+
+            <!--ToolBar Layout!-->
             <LinearLayout
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content">
@@ -41,10 +49,143 @@
             </LinearLayout>
 
 
+            <!--checkIn checkOut card Layout !-->
+        <RelativeLayout
+            android:layout_width="match_parent"
+            android:layout_height="180dp"
+            android:background="@drawable/xdf"
+            >
 
-            
+            <!--checkIn checkOut card!-->
+            <androidx.cardview.widget.CardView
+                android:id="@+id/check_card"
+                android:layout_width="300dp"
+                android:layout_height="200dp"
+                app:cardCornerRadius="10dp"
+                app:cardElevation="50dp"
+                android:layout_centerInParent="true"
+                android:background="@color/white">
+
+                <LinearLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="match_parent"
+                    android:orientation="vertical">
+
+
+
+                    <LinearLayout
+                        android:layout_width="match_parent"
+                        android:layout_height="80dp"
+                        android:orientation="horizontal"
+                        >
+
+                        <LinearLayout
+                            android:layout_width="200dp"
+                            android:layout_height="match_parent"/>
+                    </LinearLayout>
+
+                <TextView
+                    android:layout_width="190dp"
+                    android:layout_height="45dp"
+                    android:text="Welcome Back"
+                    android:textSize="25sp"
+                    android:layout_marginLeft="15dp"
+                    android:layout_marginTop="5dp"
+                    android:textColor="@color/black"
+                    android:textStyle="normal"
+                    android:fontFamily="@font/robotoregular"/>
+
+
+                    <!--For name and id !-->
+
+                    <LinearLayout
+                        android:layout_width="200dp"
+                        android:layout_height="35dp"
+                        android:orientation="horizontal">
+                        <TextView
+                            android:layout_marginLeft="15dp"
+                            android:layout_width="wrap_content"
+                            android:layout_height="30dp"
+                            android:text="Shreyash"
+                            android:textSize="25sp"
+                            android:textColor="@color/black"
+                            android:textStyle="bold"/>
+
+                        <TextView
+                            android:layout_marginLeft="10dp"
+                            android:layout_width="wrap_content"
+                            android:layout_height="30dp"
+                            android:id="@+id/ep_id_check_card"
+                            android:text="ID-411035"
+                            android:textSize="20sp"/>
+
+                    </LinearLayout>
+
+                    <!-- Clock!-->
+
+                    <LinearLayout
+                        android:layout_width="200dp"
+                        android:layout_height="30dp"
+                        android:layout_marginTop="5dp"
+                        android:orientation="horizontal"
+                        >
+
+                        <ImageView
+                            android:layout_width="40dp"
+                            android:layout_height="match_parent"
+                            android:src="@drawable/clock"
+                            android:layout_marginLeft="10dp"/>
+
+                        <TextView
+                            android:layout_width="190dp"
+                            android:layout_height="30dp"
+                            android:id="@+id/clock"
+                            android:text="09:10:25"
+                            android:textSize="20dp"
+                            android:textStyle="bold"
+                            android:textColor="#FF0000"
+                            />
+
+                    </LinearLayout>
+
+
+                    <!-- CHeck In/Out Button!-->
+
+                    <LinearLayout
+                        android:layout_width="match_parent"
+                        android:layout_height="match_parent"
+                        android:orientation="horizontal">
+
+                        <Button
+                            android:layout_width="120dp"
+                            android:layout_height="40dp"
+                            android:layout_marginLeft="20dp"
+                            android:id="@+id/check_in_button"
+                            android:layout_marginTop="10dp"
+                            android:text="Check In"/>
+
+                        <Button
+                            android:layout_width="120dp"
+                            android:layout_height="40dp"
+                            android:layout_marginLeft="20dp"
+                            android:id="@+id/check_out_button"
+                            android:layout_marginTop="10dp"
+                            android:text="Check In"/>
+
+                    </LinearLayout>
+
+
+
+
+                </LinearLayout>
+
+            </androidx.cardview.widget.CardView>
+
+        </RelativeLayout>
+
+            <!--  Grid Layout  !-->
             <GridLayout
-                android:layout_marginTop="200dp"
+                android:layout_marginTop="40dp"
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content"
                 android:columnOrderPreserved="false"
@@ -52,6 +193,7 @@
                 android:columnCount="2"
                 android:rowCount="3">
 
+                <!--  Schedule Card  !-->
             <androidx.cardview.widget.CardView
                 android:id="@+id/schedule_cardview"
                 android:layout_width="120dp"
@@ -70,10 +212,10 @@
                     android:orientation="vertical"
                     android:padding="16dp">
 
-                    <pl.droidsonroids.gif.GifImageView
-                        android:layout_width="80dp"
-                        android:layout_height="70dp"
-                        android:src="@drawable/cal_anim"/>
+                   <ImageView
+                       android:layout_width="60dp"
+                       android:layout_height="60dp"
+                       android:src="@drawable/schedule"/>
 
                     <TextView
                         android:layout_width="wrap_content"
@@ -87,7 +229,7 @@
                 </LinearLayout>
             </androidx.cardview.widget.CardView>
 
-
+                <!--  Team Card  !-->
                 <androidx.cardview.widget.CardView
                     android:id="@+id/team_cardview"
                     android:layout_width="120dp"
@@ -109,7 +251,7 @@
                         <ImageView
                             android:layout_width="60dp"
                             android:layout_height="60dp"
-                            android:src="@drawable/team"/>
+                            android:src="@drawable/group"/>
 
                         <TextView
                             android:layout_width="wrap_content"
@@ -121,10 +263,10 @@
 
 
                     </LinearLayout>
-                </androidx.cardview.widget.CardView>
+                 </androidx.cardview.widget.CardView>
 
 
-
+                <!--  Apply Leave Card  !-->
                 <androidx.cardview.widget.CardView
                     android:id="@+id/apply_leave_cardview"
                     android:layout_width="120dp"
@@ -146,7 +288,7 @@
                         <ImageView
                             android:layout_width="60dp"
                             android:layout_height="60dp"
-                            android:src="@drawable/team"/>
+                            android:src="@drawable/leave"/>
 
                         <TextView
                             android:layout_width="wrap_content"
@@ -160,7 +302,7 @@
                     </LinearLayout>
                 </androidx.cardview.widget.CardView>
 
-
+                <!--  Attendance Card  !-->
                 <androidx.cardview.widget.CardView
                     android:id="@+id/attendance_cardview"
                     android:layout_width="120dp"
@@ -182,7 +324,7 @@
                         <ImageView
                             android:layout_width="60dp"
                             android:layout_height="60dp"
-                            android:src="@drawable/team"/>
+                            android:src="@drawable/attendance"/>
 
                         <TextView
                             android:layout_width="wrap_content"
@@ -197,6 +339,7 @@
                 </androidx.cardview.widget.CardView>
 
 
+                <!--  Poll Card  !-->
 
                 <androidx.cardview.widget.CardView
                     android:id="@+id/poll_cardview"
@@ -220,7 +363,7 @@
                         <ImageView
                             android:layout_width="60dp"
                             android:layout_height="60dp"
-                            android:src="@drawable/team"/>
+                            android:src="@drawable/poll"/>
 
                         <TextView
                             android:layout_width="wrap_content"
@@ -234,6 +377,9 @@
                     </LinearLayout>
                 </androidx.cardview.widget.CardView>
 
+
+
+                <!--  My Profile Card  !-->
 
                 <androidx.cardview.widget.CardView
                     android:id="@+id/my_profile_cardview"
@@ -256,7 +402,7 @@
                         <ImageView
                             android:layout_width="60dp"
                             android:layout_height="60dp"
-                            android:src="@drawable/team"/>
+                            android:src="@drawable/pro"/>
 
                         <TextView
                             android:layout_width="wrap_content"
@@ -271,77 +417,7 @@
                 </androidx.cardview.widget.CardView>
 
 
-                <androidx.cardview.widget.CardView
-                    android:id="@+id/poll_cardview1"
-                    android:layout_width="120dp"
-                    android:layout_height="150dp"
-                    android:layout_columnWeight="1"
-                    android:layout_rowWeight="1"
-                    android:layout_margin="10dp"
-                    android:elevation="6dp"
-                    app:cardCornerRadius="10dp"
-                    >
 
-                    <LinearLayout
-
-                        android:layout_width="match_parent"
-                        android:layout_height="match_parent"
-                        android:gravity="center"
-                        android:orientation="vertical"
-                        android:padding="16dp">
-
-                        <ImageView
-                            android:layout_width="60dp"
-                            android:layout_height="60dp"
-                            android:src="@drawable/team"/>
-
-                        <TextView
-                            android:layout_width="wrap_content"
-                            android:layout_height="wrap_content"
-                            android:text="Poll"
-                            android:textAlignment="center"
-                            android:textSize="25sp"
-                            android:gravity="center_horizontal" />
-
-
-                    </LinearLayout>
-                </androidx.cardview.widget.CardView>
-
-
-                <androidx.cardview.widget.CardView
-                    android:id="@+id/my_profile_cardview2"
-                    android:layout_width="120dp"
-                    android:layout_height="150dp"
-                    android:layout_columnWeight="1"
-                    android:layout_rowWeight="1"
-                    android:layout_margin="10dp"
-                    android:elevation="6dp"
-                    app:cardCornerRadius="10dp"
-                    >
-
-                    <LinearLayout
-                        android:layout_width="match_parent"
-                        android:layout_height="match_parent"
-                        android:gravity="center"
-                        android:orientation="vertical"
-                        android:padding="16dp">
-
-                        <ImageView
-                            android:layout_width="60dp"
-                            android:layout_height="60dp"
-                            android:src="@drawable/team"/>
-
-                        <TextView
-                            android:layout_width="wrap_content"
-                            android:layout_height="wrap_content"
-                            android:text="My Profile"
-                            android:textAlignment="center"
-                            android:textSize="25sp"
-                            android:gravity="center_horizontal" />
-
-
-                    </LinearLayout>
-                </androidx.cardview.widget.CardView>
 
 
             </GridLayout>
