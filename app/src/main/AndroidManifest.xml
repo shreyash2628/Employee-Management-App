@@ -9,12 +9,14 @@
         android:roundIcon="@mipmap/ic_launcher_round"
         android:supportsRtl="true"
         android:theme="@style/AppTheme">
-        <activity android:name=".sidenavigation.Logout"></activity>
+        <activity android:name=".LoginActivity"></activity>
+        <activity android:name=".dashboard.DashBoard" />
+        <activity android:name=".sidenavigation.Logout" />
         <activity android:name=".sidenavigation.Share" />
         <activity android:name=".sidenavigation.ReportAnIssue" />
         <activity android:name=".sidenavigation.AboutCompany" />
         <activity android:name=".sidenavigation.MyProfile" />
-        <activity android:name=".dashboard.Feedback" />
+        <activity android:name=".dashboard.MyProfileDashBoard" />
         <activity android:name=".dashboard.Poll" />
         <activity android:name=".dashboard.Attendence" />
         <activity android:name=".dashboard.AppyForLeave" />
