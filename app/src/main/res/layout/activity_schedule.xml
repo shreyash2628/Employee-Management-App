@@ -1,9 +1,85 @@
 <?xml version="1.0" encoding="utf-8"?>
-<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+<ScrollView xmlns:android="http://schemas.android.com/apk/res/android"
     xmlns:app="http://schemas.android.com/apk/res-auto"
     xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
-    tools:context=".dashboard.Schedule">
+    tools:context=".dashboard.Schedule"
+    android:orientation="vertical">
 
-</androidx.constraintlayout.widget.ConstraintLayout>
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:orientation="vertical">
+
+        <!--    Toolbar-->
+        <androidx.appcompat.widget.Toolbar
+            android:id="@+id/toolbar_schedule"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:background="@color/black"
+            android:theme="@style/MyToolbarStyle"
+            app:title="Schedule"
+            app:titleTextColor="@color/white">
+        </androidx.appcompat.widget.Toolbar>
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="120dp"
+            android:orientation="horizontal">
+
+            <!-- image to be added!-->
+
+
+        </LinearLayout>
+
+        <!--            date-->
+        <TextView
+            android:id="@+id/my_date"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="DD:MM:YYYY"
+            android:textStyle="italic"
+            android:textSize="30sp"
+            android:textColor="@color/black"
+            android:layout_marginTop="10dp"
+            android:layout_marginLeft="50dp"
+            android:layout_marginBottom="20dp"
+            />
+
+            <!--            calender-->
+            <CalendarView
+                android:id="@+id/calender"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:background="#E7E7E7"
+                android:layout_centerHorizontal="true"
+                />
+
+
+
+            <!--            add event button-->
+            <Button
+                android:id="@+id/add_event_buton"
+                android:layout_width="140dp"
+                android:layout_height="50dp"
+                android:layout_below="@+id/calender"
+                android:layout_marginLeft="30dp"
+                android:layout_marginTop="20dp"
+                android:text="Add Event"
+                android:background="#5FB709"
+                android:textColor="@color/white"
+                android:textStyle="normal"
+                android:textSize="20sp"/>
+
+
+
+
+
+    </LinearLayout>
+
+
+
+
+</ScrollView>

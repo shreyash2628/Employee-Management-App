@@ -38,6 +38,7 @@ dependencies {
     implementation "com.mikepenz:materialize:1.2.1"
     implementation 'com.firebaseui:firebase-ui-firestore:6.3.0'
     implementation 'de.hdodenhof:circleimageview:3.1.0'
+    implementation 'pl.droidsonroids.gif:android-gif-drawable:1.2.19'
     implementation 'com.mikepenz:google-material-typeface:3.0.1.2.original@aar'
     testImplementation 'junit:junit:4.12'
     androidTestImplementation 'androidx.test.ext:junit:1.1.2'

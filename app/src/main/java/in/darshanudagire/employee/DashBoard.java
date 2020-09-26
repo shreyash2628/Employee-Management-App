@@ -79,6 +79,12 @@ public class DashBoard extends AppCompatActivity {
 
 
     @Override
+    protected void onRestart() {
+        super.onRestart();
+        getInfo();
+    }
+
+    @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_dash_board);
@@ -161,26 +167,8 @@ public class DashBoard extends AppCompatActivity {
         heightScreen = (int) Math.abs(dpHeight * 0.3);
 
 
-
-        //get data
-        db.collection("Users").document(emailid).get().addOnCompleteListener(new OnCompleteListener<DocumentSnapshot>() {
-            @Override
-            public void onComplete(@NonNull Task<DocumentSnapshot> task) {
-                if(task.isSuccessful())
-                {
-                    empName = task.getResult().get("name").toString();
-                    empId = task.getResult().get("empID").toString();
-                    name.setText(empName);
-                    id.setText("ID - "+empId);
-                    //built side navigation Bar
-                    buildDrawer();
-                }
-                else
-                {
-                    Toast.makeText(context,"Somethings went Wrong !",Toast.LENGTH_LONG).show();
-                }
-            }
-        });
+        buildDrawer();
+        getInfo();
 
         //attendence
         attendence.setOnClickListener(new View.OnClickListener() {
@@ -279,6 +267,30 @@ public class DashBoard extends AppCompatActivity {
 
 
 
+    }
+
+    private void getInfo() {
+        //get data
+        progressDialog.show();
+        db.collection("Users").document(emailid).get().addOnCompleteListener(new OnCompleteListener<DocumentSnapshot>() {
+            @Override
+            public void onComplete(@NonNull Task<DocumentSnapshot> task) {
+                if(task.isSuccessful())
+                {
+                    empName = task.getResult().get("name").toString();
+                    empId = task.getResult().get("empID").toString();
+                    name.setText(empName);
+                    id.setText("ID - "+empId);
+                    //built side navigation Bar
+                    progressDialog.dismiss();
+
+                }
+                else
+                {
+                    Toast.makeText(context,"Somethings went Wrong !",Toast.LENGTH_LONG).show();
+                }
+            }
+        });
     }
 
 

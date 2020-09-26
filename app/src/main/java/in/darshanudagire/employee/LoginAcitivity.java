@@ -15,20 +15,23 @@ import android.widget.Toast;
 
 import com.google.android.gms.tasks.OnCompleteListener;
 import com.google.android.gms.tasks.Task;
+import com.google.android.material.textfield.TextInputLayout;
 import com.google.firebase.auth.AuthResult;
 import com.google.firebase.auth.FirebaseAuth;
 import com.google.firebase.auth.FirebaseUser;
 import com.google.firebase.firestore.FirebaseFirestore;
 
+import in.darshanudagire.employee.dashboard.Attendence;
+
 public class LoginAcitivity extends AppCompatActivity {
 
-
-    EditText vemail,vpassword;
+    //EditText vemail,vpassword;
+    TextInputLayout vemail,vpassword;
     String email,password;
     Button login;
     FirebaseAuth mAuth;
     FirebaseFirestore db;
-    ProgressDialog progressDialog;
+    private ProgressDialog progressDialog;
 
     @Override
     protected void onStart() {
@@ -45,6 +48,7 @@ public class LoginAcitivity extends AppCompatActivity {
         }
     }
 
+
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
@@ -55,32 +59,30 @@ public class LoginAcitivity extends AppCompatActivity {
         vpassword = findViewById(R.id.edittextpassword);
         login = findViewById(R.id.loginbtn_id);
 
+
+
         //progress dialog
+        //progrees dialog
         progressDialog = new ProgressDialog(LoginAcitivity.this);
         progressDialog.setMessage("Signing In");
 
 
-        //initialize firebase auth
+        //  initialize firebase auth
         mAuth = FirebaseAuth.getInstance();
         db = FirebaseFirestore.getInstance();
 
-        //login button visibility
-        vpassword.addTextChangedListener(loginvisibility);
-        vemail.addTextChangedListener(loginvisibility);
 
 
         //Login button
         login.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View v) {
-
-
-                if(!vemail.getText().toString().equals("") && !vemail.getText().toString().contains(" "))
+                if(!vemail.getEditText().getText().toString().equals("") && !vemail.getEditText().getText().toString().contains(" "))
                 {
-                    email = vemail.getText().toString();
-                    if(!vpassword.getText().toString().equals("") && !vpassword.getText().toString().contains(" "))
+                    email = vemail.getEditText().getText().toString();
+                    if(!vpassword.getEditText().getText().toString().equals("") && !vpassword.getEditText().getText().toString().contains(" "))
                     {
-                        password = vpassword.getText().toString();
+                        password = vpassword.getEditText().getText().toString();
                         signin(email, password);
                     }
                     else
@@ -102,39 +104,9 @@ public class LoginAcitivity extends AppCompatActivity {
     }
 
 
-    //Text watcher
-    private TextWatcher loginvisibility = new TextWatcher() {
-        @Override
-        public void beforeTextChanged(CharSequence s, int start, int count, int after) {
-
-        }
-
-        @Override
-        public void onTextChanged(CharSequence s, int start, int before, int count) {
-            String username = vemail.getText().toString();
-            String password = vpassword.getText().toString();
-            if(!username.isEmpty() && !password.isEmpty())
-            {
-                login.setText("Login");
-                login.setAlpha(1);
-                login.setEnabled(true);
-            }
-            else
-            {
-                login.setText("Enter details");
-                login.setAlpha((float) 0.4);
-            }
-
-        }
-
-        @Override
-        public void afterTextChanged(Editable s) {
-
-        }
-    };
 
     //signin Function
-    private void signin(String email, String password) {
+    private void signin(String email, final String password) {
         progressDialog.show();
         mAuth.signInWithEmailAndPassword(email, password)
                 .addOnCompleteListener(this, new OnCompleteListener<AuthResult>() {
@@ -144,20 +116,28 @@ public class LoginAcitivity extends AppCompatActivity {
                         {
                             progressDialog.dismiss();
                             Toast.makeText(LoginAcitivity.this,"Authentication successful",Toast.LENGTH_LONG).show();
-                            Intent n =new Intent(LoginAcitivity.this,DashBoard.class);
+                            Intent n =new Intent(LoginAcitivity.this, DashBoard.class);
                             n.setFlags(Intent.FLAG_ACTIVITY_NEW_TASK | Intent.FLAG_ACTIVITY_CLEAR_TASK);
                             startActivity(n);
                         } else
                         {
-                            progressDialog.dismiss();
                             String error = task.getException().getMessage();
                             Toast.makeText(LoginAcitivity.this, error, Toast.LENGTH_SHORT).show();
 
                         }
 
                     }
+
+
                 });
+
+
+
+
+
+
+
+
+
     }
-
-
 }
