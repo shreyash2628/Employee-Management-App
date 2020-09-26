@@ -46,7 +46,7 @@ public class AppyForLeave extends AppCompatActivity {
         toolbar = findViewById(R.id.apply_leavetoolbar);
         start_date_et = findViewById(R.id.start_dateinfo_id);
         end_date_et = findViewById(R.id.end_dateinfo_id);
-        absence_name_et = findViewById(R.id.end_dateinfo_id);
+        absence_name_et = findViewById(R.id.absence_nameinfo_id);
         comments_et = findViewById(R.id.req_comments_id);
         button = findViewById(R.id.apply_id);
         totaldays = findViewById(R.id.totalsdays_id);
